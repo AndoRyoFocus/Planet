@@ -25,6 +25,7 @@ img {
     position: fixed;
     z-index: 10;
     width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .loading{
