@@ -26,6 +26,15 @@ SECRET_KEY = 'django-insecure-1j0sxe^hfme#=3ttfxvda_%1za*03g@e=ne5&2(u&m+*_ord-t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+try:
+  from .local_settings import *
+except ImportError:
+  pass
+
+# 本番環境では環境変数から値を取得する
+if not DEBUG:
+  SECRET_KEY = os.environ['SECRET_KEY']
+
 ALLOWED_HOSTS = []
 
 
