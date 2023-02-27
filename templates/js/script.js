@@ -1,4 +1,4 @@
-<script>
+
 var loading = $("#js-loading");
 $(window).on("load", function () {
     var windowHeight = $(window).height();
@@ -66,4 +66,3 @@ $(window).on('load resize', function () {
     }
 });
 
-</script>
