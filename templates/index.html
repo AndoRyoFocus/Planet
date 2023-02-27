@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Hunters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600;700&amp;family=Noto+Sans+JP:wght@500;900&amp;display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <link rel="icon" href="/static/Vector.png">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div id="js-loading" class="loading">
+        <div class="loading-animation">
+            <div class="atom-spinner">
+                <div class="spinner-inner">
+                    <div class="spinner-line"></div>
+                    <div class="spinner-line"></div>
+                    <div class="spinner-line"></div>
+                    <!--Chrome renders little circles malformed :(-->
+                    <div class="spinner-circle">
+                        &#9679;
+                    </div>
+                </div>
+            </div>
+            <p class="loading-txt">Loading</p>
+        </div>
+    </div>
+
+    <div class="video">
+        <video src="/static/video.mp4" autoplay loop muted playsinlin></video>
+    </div>
+    <!-- header -->
+    <header id="header">
+        <div class="header">
+            <img src="/static/Necopon games.svg">
+            <nav>
+                <ul class="header-ul">
+                    <li><a href="#story" class="header-link">STORY</a></li>
+                    <li><a href="#trailer" class="header-link">TRAILER</a></li>
+                    <li><a href="" class="header-btn">PLAY NOW</a></li>
+                </ul>
+            </nav>
+            <div class="audio-nav">
+                <div class="audio-box">
+                    <button id="js-audio-play">
+                        <span class="audio-txt">SOUND OFF</span>
+                        <span class="audioSwitch-icon material-icons-round">volume_up</span>
+                    </button>
+                </div>
+                <audio id="js-audio" loop>
+                    <source src="/static/cinematic-melody-main-9785.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    </header>
+    <div class="mv-height">
+        <div class="mv-txt">
+            <p class="mv-str1">VR GAME</p>
+            <h1 class="mv-title">Planet<br class="mv-br">Hunters</h1>
+            <p class="mv-str2">惑星を奪還せよ</p>
+            <div class="mv-btn-cont">
+                <a href="" class="mv-btn">PLAY NOW</a>
+            </div>
+        </div>
+        <img src="/static/bg-line-bottom-color.svg" class="border">
+    </div>
+    <div class="scroll-box">
+        <span class="scroll">Scroll</span>
+    </div>
+    <div class="news-box">
+        <p class="news-box-str"><span class="news-date">2030.02.20</span>バージョン5.6リリース：アバター・アイテム大量追加</p>
+    </div>
+
+
+    <!-- main -->
+    <main>
+        <section id="story">
+            <div class="container">
+                <div class="story-row-flex">
+                    <div class="story-flex column">
+                        <div class="story-flexbox">
+                            <h1 class="story-title">STORY</h1>
+                            <p class="story-str1">奪われた故郷の星を取り戻せ<br>壮大なSFファンタジー</p>
+                            <p class="story-str2">
+                                銀河歴222年、惑星ネコチャンは、ボスネコ将軍の率いる軍の反乱により完全に制圧された。将軍の側近マンチカンは軍政府に従わない人間を辺境の星ニャゴーへ強制的に追放。食料や資源の乏しいニャゴーでは多くの難民が発生し飢餓に苦しんでいた。ニャゴーのスラム街で育った孤児の姉弟がいた。姉のミケと弟のタマは母親をボスネコ将軍に殺された事実を知る。母の復讐のため、そして故郷の惑星ネコチャンを奪還すべく、ミケとタマはいま行動に出る！
+                            </p>
+                        </div>
+                        <div class="story-flexbox img-box">
+                            <img src="/static/Group 2-1.png">
+                        </div>
+                    </div>
+                    <div class="story-flex reverse column">
+                        <div class="story-flexbox">
+                            <p class="story-str1">隠された陰謀を暴け<br>衝撃的な事実に驚愕</p>
+                            <p class="story-str2">
+                                ミケとタマはネコジャラシ作戦により軍政府の最新鋭の小型船チュールを奪うことに成功。チュールのハイテンションワープ恒星間航行により惑星ネコチャンへあとわずか３時間で到着という時、小惑星帯アビシニアンで謎の救難信号を受信する。意外にも信号の発信源はボスネコ将軍だった。彼は今にも絶えそうなかすれた声で「私はおまえたちミケとタマの父親なのだ」と語る。その瞬間、ミケとタマの育ての親同然で仲間のはずのホワイトオッドアイがタマの背中を刀で切り裂いたのだった......
+                            </p>
+                        </div>
+                        <div class="story-flexbox img-box2">
+                            <img src="/static/Group 2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <img src="/static/bg-line-bottom-color.svg" class="border2">
+
+        <!-- fight -->
+        <section id="fight">
+            <div class="fight container">
+                <h1 class="fight-title">ARE YOU READY TO FIGHT?</h1>
+                <div class="fight-btn-cont">
+                    <a href="" class="mv-btn">PLAY NOW</a>
+                </div>
+            </div>
+            <img src="/static/bg-line-bottom-color (1).svg" class="border3">
+        </section>
+
+
+
+        <!-- trailer -->
+        <section id="trailer">
+            <div class="container">
+                <h1 class="trailer-title">TRAILER</h1>
+                <div class="trailer-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RO_RRKTYzUY"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </section>
+
+        <img src="/static/bg-line-bottom-color (1).svg" class="border2">
+
+        <!-- fight -->
+        <section id="fight">
+            <div class="fight container">
+                <h1 class="fight-title">ARE YOU READY TO FIGHT?</h1>
+                <div class="fight-btn-cont">
+                    <a href="" class="mv-btn">PLAY NOW</a>
+                </div>
+            </div>
+            <img src="/static/bg-line-bottom-color.svg" class="border3">
+        </section>
+    </main>
+
+
+    <!-- footer -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0"
+        nonce="oeJNfR4y"></script>
+    <footer class="footer">
+        <div class="footer-flex column">
+            <nav>
+                <ul class="footer-ul">
+                    <li>
+                        <div class="fb-like fb_iframe_widget" data-href="URLが入る" data-width=""
+                            data-layout="button_count" data-action="like" data-size="large" data-share="true"
+                            fb-xfbml-state="rendered"
+                            fb-iframe-plugin-query="action=like&amp;app_id=&amp;container_width=0&amp;href=https%3A%2F%2Fwebdesigner-go.com%2Fplanet-hunters%2FURL%25E3%2581%258C%25E5%2585%25A5%25E3%2582%258B&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=true&amp;size=large&amp;width=">
+                            <span style="vertical-align: bottom; width: 222px; height: 28px;"><iframe
+                                    name="f25c1d18e993268" width="1000px" height="1000px"
+                                    data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin"
+                                    frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                                    allow="encrypted-media"
+                                    src="https://web.facebook.com/v12.0/plugins/like.php?action=like&amp;app_id=&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df3a24cfda9049d%26domain%3Dwebdesigner-go.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fwebdesigner-go.com%252Ff18a996299075d8%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fwebdesigner-go.com%2Fplanet-hunters%2FURL%25E3%2581%258C%25E5%2585%25A5%25E3%2582%258B&amp;layout=button_count&amp;locale=ja_JP&amp;sdk=joey&amp;share=true&amp;size=large&amp;width="
+                                    style="border: none; visibility: visible; width: 222px; height: 28px;"
+                                    class=""></iframe></span>
+                        </div>
+                    </li>
+                    <li><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                            data-show-count="false">Tweet</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </li>
+                    <li>
+                        <div class="line-it-button" data-lang="ja" data-type="share-b" data-env="REAL"
+                            data-url="https://developers.line.biz/ja/docs/line-social-plugins/install-guide/using-line-share-buttons/"
+                            data-color="default" data-size="small" data-count="false" data-ver="3"
+                            style="display: none;"></div>
+                        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js"
+                            async="async" defer="defer"></script>
+                    </li>
+                </ul>
+            </nav>
+            <p class="companyName">©Necopon games</p>
+        </div>
+    </footer>
+
+    <div class="sp-play">
+        <a href="" class="bottom-btn">PLAY NOW</a>
+    </div>
+</body>
+{% include 'js.html' %}
+
+</html>
