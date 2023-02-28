@@ -33,6 +33,7 @@ $('#js-audio-play').click(function () {
         $('#js-audio-play').addClass('on');
     }
     else {
+        console.log($('.audio-txt').text())
         audio.pause();
         $('.audio-txt').text('SOUND OFF');
         $('#js-audio-play').removeClass('on');
