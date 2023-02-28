@@ -65,4 +65,3 @@ $(window).on('load resize', function () {
         $spCTA.addClass('none')
     }
 });
-
